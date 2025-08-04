@@ -6,11 +6,11 @@ pkgs.stdenv.mkDerivation {
     pkgs.python310
     pkgs.python310Packages.requests
     pkgs.python310Packages.beautifulsoup4
-    pkhs.python310Packages.python-dotenv
+    pkgs.python310Packages.python-dotenv
   ];
   src         = ./.;
   installPhase = ''
     mkdir -p $out/bin
-    cp script.py $out/bin/
+    cp main.py $out/bin/
   '';
 }
