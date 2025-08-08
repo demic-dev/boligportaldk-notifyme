@@ -1,0 +1,6 @@
+{
+    "search_url": "https://www.boligportal.dk/en/rental-apartments/all-cities/2-3-rooms/?max_available_from=2025-09-01&zoom=10.89258100344646&center=12.65483510347849%2C55.66276671506256&min_lat=55.568459130827534&min_lng=12.393343142851535&max_lat=55.7568476068997&max_lng=12.916327064104564&max_monthly_rent=20000&furnished=1",
+    "check_interval": 15,
+    "listings_cache_file": "seen_listings.txt"
+}
+
