@@ -2,3 +2,4 @@
 *.env
 result
 output*.log
+seen_listings*.txt

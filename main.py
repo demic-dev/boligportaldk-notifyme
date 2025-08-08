@@ -1,13 +1,22 @@
 import time
 from datetime import datetime
 
+import sys
+
 from notifier import TelegramNotifier
 from scraper import BoligScraper
 
 
 def main():
-    scraper = BoligScraper('config/config.json')
-    notifier = TelegramNotifier()
+    if len(sys.argv) > 1:
+        config_file = sys.argv[1]
+        path = sys.argv[2]
+    else:
+        config_file = "config/config.json"
+        path = ".env"
+
+    scraper = BoligScraper(config_file)
+    notifier = TelegramNotifier(path)
 
     # test
     print(f"Starting monitoring of {scraper.config['search_url']}")

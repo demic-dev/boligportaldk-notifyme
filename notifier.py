@@ -3,11 +3,13 @@ from typing import Dict
 
 import requests
 from dotenv import load_dotenv
+from pathlib import Path
 
 
 class TelegramNotifier:
-    def __init__(self):
-        load_dotenv()
+    def __init__(self, path):
+        dotenv_path = Path(path)
+        load_dotenv(dotenv_path)
         self.bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
         self.chat_id = os.getenv('TELEGRAM_CHAT_ID')
 
